@@ -1,0 +1,11 @@
+pip
+setuptools
+wheel
+streamlit==1.35.0
+pandas==2.2.2
+scikit-learn==1.4.2
+matplotlib==3.8.4
+koreanize-matplotlib
+seaborn
+plotly
+statsmodels
