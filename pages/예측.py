@@ -7,7 +7,7 @@ import koreanize_matplotlib
 st.title("📏 지도학습 - 예측(Prediction)")
 st.markdown("""
 이 데이터는 영국의 통계학자 프랜시스 골턴이 수집한 가족의 키 데이터로 가족 구성원의 성별과 키를 포함하고 있습니다.
-데이터를 학습한 **예측 모델**이 나의 미래 자녀의 키를 어떻게 예측하는지 확인인해보세요.
+데이터를 학습한 **예측 모델**이 나의 미래 자녀의 키를 어떻게 예측하는지 확인해보세요.
 """)
 st.page_link("https://www.kaggle.com/datasets/jacopoferretti/parents-heights-vs-children-heights-galton-data", label="출처 : Parents' Heights vs Adult Children's Heights(kaggle)")
 
