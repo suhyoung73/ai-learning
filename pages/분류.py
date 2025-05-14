@@ -16,6 +16,9 @@ st.page_link("https://www.kaggle.com/datasets/mrsimple07/student-exam-performanc
 df = pd.read_csv("data/Student_Exam.csv")
 st.subheader("📊 데이터 미리보기")
 st.dataframe(df.head())
+st.markdown("""
+- Pass(1)/Fail(0)
+""")
 
 st.subheader("📊 데이터 시각화 결과보기")
 # 공부 시간 - 합격 여부
@@ -58,8 +61,8 @@ boundary_index_score = diff_score.argmin()
 boundary_score = x_range_score[boundary_index_score][0]
 
 ax2.axvline(x=boundary_score, color='green', linestyle='--', label=f'합격 기준: {boundary_score:.2f}점')
-ax1.set_xlabel("이전 시험 성적")
-ax1.set_ylabel("합격 여부")
+ax2.set_xlabel("이전 시험 성적")
+ax2.set_ylabel("합격 여부")
 ax2.legend()
 st.pyplot(fig2)
 
