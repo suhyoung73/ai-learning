@@ -8,7 +8,7 @@ with c2:
     st.markdown("#### 📂 지도학습")
     col1, col2, col3 = st.columns([1, 4, 4])
     with col2:
-        st.page_link("pages/예측.py", label="1-1) **예측**", icon="📏")
+        st.page_link("pages/예측.py", label="1-1) 예측", icon="📏")
     with col3:
         st.page_link("pages/분류.py", label="1-2) 분류", icon="📚")
 
