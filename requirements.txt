@@ -9,3 +9,4 @@ koreanize-matplotlib
 seaborn
 plotly
 statsmodels
+numpy
