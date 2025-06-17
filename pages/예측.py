@@ -47,7 +47,6 @@ st.pyplot(fig1)
 st.markdown("""
 - **모델2** : 부모 각각의 키를 기반으로 자녀의 키를 예측한 다중 회귀 모델
 """)
-st.subheader("📊 부모 각각 키 기반 예측 모델 시각화 (3D)")
 fig2 = plt.figure(figsize=(6, 5))
 ax2 = fig2.add_subplot(111, projection='3d')
 ax2.scatter(father, mother, child, alpha=0.3, label="실제 데이터")
@@ -71,14 +70,11 @@ with col1:
 with col2:
     partner_height = st.slider("미래 배우자의 키(cm)", 130, 200, 160)
 
-# 평균 키 기반 예측
-avg_parent_height = (my_height + partner_height) / 2
-pred1 = model1.predict([[avg_parent_height]])[0]
+height_mean = (my_height + partner_height) / 2
+pred1 = model1.predict([[height_mean]])[0]
 
-# 다중 회귀 기반 예측
-X_input_multi = [[my_height, partner_height]]
-pred2 = model2.predict(X_input_multi)[0]
+height_multi = [[my_height, partner_height]]
+pred2 = model2.predict(height_multi)[0]
 
-# 결과 출력
-st.success(f"📏 부모 평균 키 기반 예측: **{pred1:.1f} cm**")
-st.success(f"📐 아빠/엄마 키 각각 사용한 예측: **{pred2:.1f} cm**")
+st.success(f"📏 나와 미래 배우자의 평균 키를 기반으로 예측한 미래 자녀의 키는 **{pred1:.1f} cm**입니다.")
+st.success(f"📐 나와 미래 배우자 각각의 키를 기반으로 예측한 미래 자녀의 키는 **{pred2:.1f} cm**입니다.")
